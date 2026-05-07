@@ -462,7 +462,7 @@ button:focus-visible {
             <div class="card">
                 <div class="card-title">
                     <h3>Agregar metros</h3>
-                    <span class="pedido-chip">Mayoreo desde 5 m</span>
+                    <span class="pedido-chip">Mayoreo desde 3 m</span>
                 </div>
                 <div class="botones">
                     <button class="btn-rosa" type="button" data-metros="0.5">Agregar 0.5 m</button>
@@ -569,7 +569,7 @@ button:focus-visible {
 
                         <div class="fila">
                             <span>Extras:</span>
-                            <span id="t_extra">$0.00</span>
+                            <span id="t_extra">Sin extra - $0.00</span>
                         </div>
 
                         <div class="linea"></div>
@@ -681,7 +681,7 @@ function guardarPedidoActual() {
 }
 
 function calcularImpresion(cantidadMetros) {
-    if (cantidadMetros >= 5) {
+    if (cantidadMetros >= 3) {
         return cantidadMetros * PRECIO_MAYOREO;
     }
 
@@ -772,7 +772,7 @@ function pintarTicket(order) {
     els.tCliente.innerText = order.cliente;
     els.tMetros.innerText = order.metros.toLocaleString("es-MX", { maximumFractionDigits: 2 });
     els.tImpresion.innerText = formatearDinero(order.impresion);
-    els.tExtra.innerText = formatearDinero(order.extraCosto);
+    els.tExtra.innerText = order.extraTexto + " - " + formatearDinero(order.extraCosto);
     els.tTotal.innerText = formatearDinero(order.total);
     els.tFecha.innerText = order.fecha;
     els.total.innerText = formatearDinero(order.total);
@@ -817,7 +817,7 @@ function nuevoPedido() {
     els.tCliente.innerText = "Sin nombre";
     els.tMetros.innerText = "0";
     els.tImpresion.innerText = formatearDinero(0);
-    els.tExtra.innerText = formatearDinero(0);
+    els.tExtra.innerText = "Sin extra - " + formatearDinero(0);
     els.tTotal.innerText = formatearDinero(0);
     els.tFecha.innerText = "";
     pintarValores();
