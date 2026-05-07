@@ -2,139 +2,187 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DTF ZONA 98</title>
 
 <style>
-:root {
-    --rosa: #fe218b;
-    --amarillo: #fed700;
-    --azul: #21b0fe;
-    --bg: #0a0a0a;
-    --card: #1a1a1a;
-    --text: #ffffff;
+
+:root{
+    --rosa:#fe218b;
+    --amarillo:#fed700;
+    --azul:#21b0fe;
+    --bg:#0a0a0a;
+    --card:#1a1a1a;
+    --text:#ffffff;
 }
 
-.light {
-    --bg: #f5f5f5;
-    --card: #ffffff;
-    --text: #000000;
+.light{
+    --bg:#f5f5f5;
+    --card:#ffffff;
+    --text:#000000;
 }
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: var(--bg);
-    color: var(--text);
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:var(--bg);
+    color:var(--text);
 }
 
-.app {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
+.app{
+    max-width:420px;
+    margin:auto;
+    padding:20px;
 }
 
-.logo img {
-    width: 90px;
-    display: block;
-    margin: auto;
+.logo img{
+    width:90px;
+    display:block;
+    margin:auto;
 }
 
-h1 {
-    text-align: center;
-    background: linear-gradient(90deg, var(--rosa), var(--amarillo), var(--azul));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+h1{
+    text-align:center;
+    background:linear-gradient(90deg,var(--rosa),var(--amarillo),var(--azul));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-.card {
-    background: var(--card);
-    padding: 15px;
-    border-radius: 15px;
-    margin-top: 15px;
-    animation: fadeIn 0.4s ease;
+.card{
+    background:var(--card);
+    padding:15px;
+    border-radius:16px;
+    margin-top:15px;
+    animation:fade .4s ease;
+    box-shadow:0 0 15px rgba(0,0,0,.2);
 }
 
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(10px);}
-    to {opacity: 1; transform: translateY(0);}
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-.botones {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+.botones{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
 }
 
-button, input {
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    font-weight: bold;
+button,input{
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    font-weight:bold;
 }
 
-input {
-    width: 100%;
-    margin-bottom: 10px;
+input{
+    width:100%;
+    box-sizing:border-box;
 }
 
-button {
-    cursor: pointer;
-    color: white;
-    transition: 0.2s;
+button{
+    cursor:pointer;
+    transition:.2s;
+    color:white;
 }
 
-button:hover {
-    transform: scale(1.05);
+button:hover{
+    transform:scale(1.04);
 }
 
-.btn-rosa { background: var(--rosa); }
-.btn-amarillo { background: var(--amarillo); color: black; }
-.btn-azul { background: var(--azul); }
+.btn-rosa{
+    background:var(--rosa);
+}
 
-.total {
-    font-size: 24px;
-    text-align: center;
-    margin-top: 10px;
+.btn-amarillo{
+    background:var(--amarillo);
+    color:black;
+}
+
+.btn-azul{
+    background:var(--azul);
+}
+
+.total{
+    text-align:center;
+    font-size:28px;
+    margin-top:15px;
+    font-weight:bold;
 }
 
 /* TICKET */
-.ticketBox { padding: 10px; }
 
-.ticket {
-    background: white;
-    color: black;
-    padding: 20px;
-    border-radius: 15px;
-    width: 320px;
-    margin: auto;
-    text-align: center;
+.ticket{
+    background:white;
+    color:black;
+    width:320px;
+    margin:auto;
+    border-radius:18px;
+    padding:20px;
+    margin-top:15px;
 }
 
-.ticket-logo { width: 70px; }
-
-.sub { font-size: 12px; color: gray; }
-
-.linea {
-    height: 2px;
-    background: linear-gradient(90deg, #fe218b, #fed700, #21b0fe);
-    margin: 10px 0;
+.ticket-logo{
+    width:70px;
+    display:block;
+    margin:auto;
 }
 
-.fila {
-    display: flex;
-    justify-content: space-between;
-    margin: 6px 0;
+.sub{
+    color:gray;
+    font-size:12px;
+    text-align:center;
 }
 
-.totalTicket {
-    font-size: 20px;
-    font-weight: bold;
+.linea{
+    height:2px;
+    background:linear-gradient(90deg,#fe218b,#fed700,#21b0fe);
+    margin:12px 0;
 }
 
-.fecha {
-    font-size: 11px;
-    color: gray;
+.fila{
+    display:flex;
+    justify-content:space-between;
+    margin:7px 0;
 }
+
+.totalTicket{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.fecha{
+    font-size:11px;
+    color:gray;
+    text-align:center;
+    margin-top:12px;
+}
+
+/* HISTORIAL */
+
+.historial-item{
+    background:#111;
+    padding:10px;
+    border-radius:12px;
+    margin-top:10px;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.light .historial-item{
+    background:#eaeaea;
+    color:black;
+}
+
 </style>
 </head>
 
@@ -152,175 +200,435 @@ button:hover {
     <button class="btn-azul" onclick="modo()">🌙 / ☀️</button>
 </div>
 
+<!-- CLIENTE -->
+
 <div class="card">
+
     <input type="text" id="cliente" placeholder="Nombre del cliente">
-    <p>Pedido #: <b id="pedidoNum"></b></p>
+
+    <p>
+        Pedido #:
+        <b id="pedidoNum"></b>
+    </p>
+
 </div>
 
+<!-- METROS -->
+
 <div class="card">
+
     <h3>Metros</h3>
+
     <div class="botones">
-        <button class="btn-rosa" onclick="agregar(0.5)">+0.5</button>
-        <button class="btn-azul" onclick="agregar(1)">+1</button>
-        <button class="btn-amarillo" onclick="reset()">Reset</button>
+
+        <button class="btn-rosa" onclick="agregar(0.5)">
+            +0.5
+        </button>
+
+        <button class="btn-azul" onclick="agregar(1)">
+            +1
+        </button>
+
+        <button class="btn-amarillo" onclick="resetMetros()">
+            Reset
+        </button>
+
     </div>
-    <p>Metros: <b id="metros">0</b></p>
+
+    <p>
+        Metros:
+        <b id="metros">0</b>
+    </p>
+
 </div>
 
+<!-- EXTRAS -->
+
 <div class="card">
-    <h3>Extras</h3>
+
+    <h3>Servicios Extra</h3>
+
     <div class="botones">
-        <button class="btn-rosa" onclick="extra(0)">Sin extra</button>
-        <button class="btn-azul" onclick="extra(50)">Acomodo</button>
-        <button class="btn-amarillo" onclick="extra(100)">Acomodo + Edición</button>
+
+        <button class="btn-rosa" onclick="extra(0)">
+            Sin extra
+        </button>
+
+        <button class="btn-azul" onclick="extra(50)">
+            Acomodo
+        </button>
+
+        <button class="btn-amarillo" onclick="extra(100)">
+            Acomodo + Edición
+        </button>
+
     </div>
-    <p>Extra: $<b id="extra">0</b></p>
+
+    <p>
+        Servicio:
+        <b id="extra">
+            Sin extra
+        </b>
+    </p>
+
 </div>
 
+<!-- TOTAL -->
+
 <div class="card">
-    <button class="btn-rosa" onclick="calcular()">Calcular</button>
-    <div class="total" id="total">$0</div>
 
-    <div class="ticketBox">
-        <div class="ticket" id="ticket">
-            <img src="LOGO DTF ZONA 98.png" class="ticket-logo">
-            <h2>DTF ZONA 98</h2>
-            <p class="sub">Servicio de impresión DTF</p>
+    <button class="btn-rosa" onclick="calcular()">
+        Calcular
+    </button>
 
-            <div class="linea"></div>
+    <div class="total" id="total">
+        $0
+    </div>
 
-            <div class="fila">
-                <span>Pedido:</span>
-                <span id="t_pedido"></span>
-            </div>
+    <!-- TICKET -->
 
-            <div class="fila">
-                <span>Cliente:</span>
-                <span id="t_cliente"></span>
-            </div>
+    <div class="ticket" id="ticket">
 
-            <div class="linea"></div>
+        <img src="LOGO DTF ZONA 98.png" class="ticket-logo">
 
-            <div class="fila">
-                <span>Metros:</span>
-                <span id="t_metros"></span>
-            </div>
+        <h2 style="text-align:center;">
+            DTF ZONA 98
+        </h2>
 
-            <div class="fila">
-                <span>Impresión:</span>
-                <span id="t_impresion"></span>
-            </div>
+        <p class="sub">
+            Servicio de impresión DTF
+        </p>
 
-            <div class="fila">
-                <span>Extras:</span>
-                <span id="t_extra"></span>
-            </div>
+        <div class="linea"></div>
 
-            <div class="linea"></div>
-
-            <div class="totalTicket">
-                TOTAL: <span id="t_total"></span>
-            </div>
-
-            <p class="fecha" id="t_fecha"></p>
+        <div class="fila">
+            <span>Pedido:</span>
+            <span id="t_pedido"></span>
         </div>
+
+        <div class="fila">
+            <span>Cliente:</span>
+            <span id="t_cliente"></span>
+        </div>
+
+        <div class="linea"></div>
+
+        <div class="fila">
+            <span>Metros:</span>
+            <span id="t_metros"></span>
+        </div>
+
+        <div class="fila">
+            <span>Impresión:</span>
+            <span id="t_impresion"></span>
+        </div>
+
+        <div class="fila">
+            <span>Servicio:</span>
+            <span id="t_extra"></span>
+        </div>
+
+        <div class="linea"></div>
+
+        <div class="totalTicket">
+            TOTAL:
+            <span id="t_total"></span>
+        </div>
+
+        <p class="fecha" id="t_fecha"></p>
+
     </div>
 
-    <button class="btn-azul" onclick="descargarImagen()">Descargar Ticket</button>
+    <br>
+
+    <button class="btn-azul" onclick="descargarImagen()">
+        Descargar Ticket
+    </button>
+
+</div>
+
+<!-- HISTORIAL -->
+
+<div class="card">
+
+    <h3>Historial de Extras</h3>
+
+    <div id="historial"></div>
+
+    <br>
+
+    <button class="btn-amarillo" onclick="borrarHistorial()">
+        Borrar Historial
+    </button>
+
 </div>
 
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 <script>
+
 let metros = 0;
 let extraCosto = 0;
+let extraTexto = "Sin extra";
 
-// pedido persistente
+// PEDIDOS
+
 let pedido = localStorage.getItem("pedidoDTF");
+
 pedido = pedido ? parseInt(pedido) : 1;
+
 document.getElementById("pedidoNum").innerText = pedido;
 
+// HISTORIAL
+
+let historialExtras =
+JSON.parse(
+localStorage.getItem("historialExtrasDTF")
+) || [];
+
+// METROS
+
 function agregar(v){
+
     metros += v;
+
     document.getElementById("metros").innerText = metros;
+
 }
 
-function reset(){
+function resetMetros(){
+
     metros = 0;
+
     document.getElementById("metros").innerText = 0;
+
 }
+
+// EXTRA
 
 function extra(v){
+
     extraCosto = v;
-    document.getElementById("extra").innerText = v;
+
+    if(v == 0){
+        extraTexto = "Sin extra";
+    }
+
+    if(v == 50){
+        extraTexto = "Acomodo";
+    }
+
+    if(v == 100){
+        extraTexto = "Acomodo + Edición";
+    }
+
+    document.getElementById("extra").innerText = extraTexto;
+
 }
 
+// CALCULAR
+
 function calcular(){
-    let cliente = document.getElementById("cliente").value || "Sin nombre";
+
+    let cliente =
+    document.getElementById("cliente").value
+    || "Sin nombre";
 
     let precio = 0;
-    if (metros >= 5){
+
+    // 🔥 DESDE 3 METROS = 130
+
+    if(metros >= 3){
+
         precio = metros * 130;
-    } else {
-        let e = Math.floor(metros);
-        let m = metros - e;
-        precio += e * 140;
-        if (m >= 0.5) precio += 70;
+
+    }else{
+
+        let enteros = Math.floor(metros);
+
+        let medio = metros - enteros;
+
+        precio += enteros * 140;
+
+        if(medio >= 0.5){
+
+            precio += 70;
+
+        }
+
     }
 
     let total = precio + extraCosto;
 
-    document.getElementById("total").innerText = "$" + total;
+    // TOTAL
 
-    document.getElementById("t_pedido").innerText = pedido;
-    document.getElementById("t_cliente").innerText = cliente;
-    document.getElementById("t_metros").innerText = metros;
-    document.getElementById("t_impresion").innerText = "$" + precio;
-    document.getElementById("t_extra").innerText = "$" + extraCosto;
-    document.getElementById("t_total").innerText = "$" + total;
-    document.getElementById("t_fecha").innerText = new Date().toLocaleString();
+    document.getElementById("total").innerText =
+    "$" + total;
+
+    // TICKET
+
+    document.getElementById("t_pedido").innerText =
+    pedido;
+
+    document.getElementById("t_cliente").innerText =
+    cliente;
+
+    document.getElementById("t_metros").innerText =
+    metros;
+
+    document.getElementById("t_impresion").innerText =
+    "$" + precio;
+
+    document.getElementById("t_extra").innerText =
+    extraTexto + " ($" + extraCosto + ")";
+
+    document.getElementById("t_total").innerText =
+    "$" + total;
+
+    document.getElementById("t_fecha").innerText =
+    new Date().toLocaleString();
+
+    // HISTORIAL
+
+    if(extraCosto > 0){
+
+        historialExtras.push({
+
+            pedido: pedido,
+            cliente: cliente,
+            servicio: extraTexto,
+            costo: extraCosto,
+            fecha: new Date().toLocaleString()
+
+        });
+
+        localStorage.setItem(
+            "historialExtrasDTF",
+            JSON.stringify(historialExtras)
+        );
+
+        mostrarHistorial();
+
+    }
+
 }
+
+// DESCARGAR
 
 function descargarImagen(){
-    const ticket = document.getElementById("ticket");
 
-    html2canvas(ticket, {
-        scale: 3,
-        useCORS: true,
-        backgroundColor: "#ffffff"
-    }).then(canvas => {
+    const ticket =
+    document.getElementById("ticket");
 
-        canvas.toBlob(function(blob) {
+    html2canvas(ticket,{
 
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement("a");
+        scale:3,
+        useCORS:true,
+        backgroundColor:"#ffffff"
+
+    }).then(canvas=>{
+
+        canvas.toBlob(function(blob){
+
+            const url =
+            URL.createObjectURL(blob);
+
+            const link =
+            document.createElement("a");
 
             link.href = url;
-            link.download = "ticket_dtf_zona98.png";
+
+            link.download =
+            "ticket_dtf_zona98.png";
 
             document.body.appendChild(link);
+
             link.click();
 
-            setTimeout(() => {
+            setTimeout(()=>{
+
                 document.body.removeChild(link);
+
                 URL.revokeObjectURL(url);
-            }, 100);
+
+            },100);
+
+            // SIGUIENTE PEDIDO
 
             pedido++;
-            localStorage.setItem("pedidoDTF", pedido);
-            document.getElementById("pedidoNum").innerText = pedido;
 
-        }, "image/png");
+            localStorage.setItem(
+                "pedidoDTF",
+                pedido
+            );
+
+            document.getElementById("pedidoNum").innerText =
+            pedido;
+
+        },"image/png");
 
     });
+
 }
+
+// HISTORIAL
+
+function mostrarHistorial(){
+
+    const contenedor =
+    document.getElementById("historial");
+
+    contenedor.innerHTML = "";
+
+    [...historialExtras].reverse().forEach(item=>{
+
+        contenedor.innerHTML += `
+
+        <div class="historial-item">
+
+            <b>Pedido #${item.pedido}</b><br>
+
+            👤 ${item.cliente}<br>
+
+            🛠 ${item.servicio}<br>
+
+            💸 $${item.costo}<br>
+
+            📅 ${item.fecha}
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+function borrarHistorial(){
+
+    localStorage.removeItem(
+        "historialExtrasDTF"
+    );
+
+    historialExtras = [];
+
+    mostrarHistorial();
+
+}
+
+mostrarHistorial();
+
+// MODO
 
 function modo(){
-    document.body.classList.toggle("light");
-}
-</script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    document.body.classList.toggle("light");
+
+}
+
+</script>
 
 </body>
 </html>
